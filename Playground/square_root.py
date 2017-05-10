@@ -1,9 +1,10 @@
 import numpy as np
 import sys
 
+
 def calculate_bilinear_coeffs(d1, d2, d3, d4, p):
 
-    #TODO PROBLEM Z INtERPRETACJA WYNIKOW
+    # TODO PROBLEM Z INtERPRETACJA WYNIKOW
 
     a1 = d1[0]
     a2 = d2[0] - d1[0] 
@@ -23,8 +24,8 @@ def calculate_bilinear_coeffs(d1, d2, d3, d4, p):
 
     roots = np.roots(coeff)
 
-    #TODO UWAGA NA WYLICZANIE b
-    #moze sie wydarzyc ze obydwa roots spelniaja warunki ponizsze - co wtedy?
+    # TODO UWAGA NA WYLICZANIE b
+    # moze sie wydarzyc ze obydwa roots spelniaja warunki ponizsze - co wtedy?
     # pierwsza koncpecja b nalezy do przedzialu [0,1] - wkodzie to uwzgledniono ale trzreba potwierdzic matematycznie
 
     if len(roots) == 2:
@@ -49,7 +50,7 @@ def calculate_bilinear_coeffs(d1, d2, d3, d4, p):
 
 
 if __name__ == "__main__":
-    #calculate_bilinear_coeffs([1,7],[5,7],[5,1],[1,1],[3,4])
+    # calculate_bilinear_coeffs([1,7],[5,7],[5,1],[1,1],[3,4])
     a1,b1 = calculate_bilinear_coeffs([4,9],[10,9],[13,1],[1,1],[1,1])
     a2,b2 = calculate_bilinear_coeffs([4,9],[10,9],[13,1],[1,1],[10,9])
     

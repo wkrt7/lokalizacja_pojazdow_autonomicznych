@@ -3,6 +3,8 @@ from Label import label
 import numpy as np
 from CenterOfMass import centerOfMass
 from DetectEdges import detect_edges
+from Playground.square_root import calculate_bilinear_coeffs
+from Playground.distance_calculation import distance_calculation
 import time
 
 def recognizeCar():
@@ -29,6 +31,7 @@ def recognizeCar():
     # Detecting edges of box
     d1, d2, d3, d4 = detect_edges(mass_vec,img)
     print d1, d2, d3, d4
+
 #     TODO : Nalezy usunąć współrzędne wierzchołków z bazy mass_vec ??
 if __name__ == "__main__":
     start_time = time.time()
