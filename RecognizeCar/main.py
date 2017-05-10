@@ -6,7 +6,7 @@ from DetectEdges import detect_edges
 import time
 
 def recognizeCar():
-    path = os.path.join('..', 'Data', 'mapa_autka.jpg')
+    path = os.path.join('..', 'Data', 'test2.png')
     img = cv2.imread(path)
     # img = cv2.resize(img, (600, 600))
     # Converting to binary image
@@ -26,8 +26,9 @@ def recognizeCar():
     mass_vec = centerOfMass(img_labeled, obj_num_total=obj_num_total, obj_num=obj_num)
     print mass_vec
 
-    d1, d2, d3, d4 = detect_edges(mass_vec)
-    print d1
+    d1, d2, d3, d4 = detect_edges(mass_vec,img)
+
+    print d1, d2, d3, d4
 
 if __name__ == "__main__":
     start_time = time.time()
