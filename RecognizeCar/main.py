@@ -2,6 +2,7 @@ import cv2, os
 from Label import label
 import numpy as np
 from CenterOfMass import centerOfMass
+from DetectEdges import detect_edges
 import time
 
 def recognizeCar():
@@ -24,6 +25,9 @@ def recognizeCar():
     # Counting center of mass labelled objects
     mass_vec = centerOfMass(img_labeled, obj_num_total=obj_num_total, obj_num=obj_num)
     print mass_vec
+
+    d1, d2, d3, d4 = detect_edges(mass_vec)
+    print d1
 
 if __name__ == "__main__":
     start_time = time.time()
