@@ -2,7 +2,7 @@ import numpy as np
 import sys
 
 def calculate_bilinear_coeffs(d1, d2, d3, d4, p):
-    
+
     #TODO PROBLEM Z INtERPRETACJA WYNIKOW
 
     a1 = d1[0]
@@ -22,7 +22,6 @@ def calculate_bilinear_coeffs(d1, d2, d3, d4, p):
     coeff = [A, B, C]
 
     roots = np.roots(coeff)
-    print roots
 
     #TODO UWAGA NA WYLICZANIE b
     #moze sie wydarzyc ze obydwa roots spelniaja warunki ponizsze - co wtedy?
@@ -46,9 +45,13 @@ def calculate_bilinear_coeffs(d1, d2, d3, d4, p):
 
     a = (p[0] - a1 - a3*b)/(a2 + b4*b)
 
-    print a,b
+    return a,b
 
 
 if __name__ == "__main__":
     #calculate_bilinear_coeffs([1,7],[5,7],[5,1],[1,1],[3,4])
-    calculate_bilinear_coeffs([744,190],[1387,194],[1655,926],[454,800],[987,563])
+    a1,b1 = calculate_bilinear_coeffs([4,9],[10,9],[13,1],[1,1],[1,1])
+    a2,b2 = calculate_bilinear_coeffs([4,9],[10,9],[13,1],[1,1],[10,9])
+    
+    print a1,b1
+    print a2,b2
