@@ -1,5 +1,9 @@
 
 # Byte-compiled / optimized / DLL files
+# Wlasne
+*.bat
+
+
 # PyCharm____________
 .idea/
 __pycache__/
