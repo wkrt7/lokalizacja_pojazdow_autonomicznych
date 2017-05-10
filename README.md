@@ -1,5 +1,6 @@
 # lokalizacja_pojazdow_automnomicznych
 !!TODO!!:
+0) Rozpoznie krańców planszy
 1) Transformacja względem rzeczywistości
 2) Rozpoznanie znaczników: 
     a) sparowanie podstaw
