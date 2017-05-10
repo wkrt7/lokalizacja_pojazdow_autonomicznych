@@ -26,10 +26,10 @@ def recognizeCar():
     mass_vec = centerOfMass(img_labeled, obj_num_total=obj_num_total, obj_num=obj_num)
     print mass_vec
 
+    # Detecting edges of box
     d1, d2, d3, d4 = detect_edges(mass_vec,img)
-
     print d1, d2, d3, d4
-
+#     TODO : Nalezy usunąć współrzędne wierzchołków z bazy mass_vec ??
 if __name__ == "__main__":
     start_time = time.time()
     recognizeCar()
