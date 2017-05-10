@@ -13,8 +13,8 @@ def centerOfMass(img=None,obj_num_total=None,obj_num=None):
 
     for i in range(len(M00)):
         tmp = np.where(img == i+1)
-        M10[i] = sum(tmp[0])
-        M01[i] = sum(tmp[1])
+        M01[i] = sum(tmp[0])
+        M10[i] = sum(tmp[1])
     # print M00
     # print M10
     # print M01

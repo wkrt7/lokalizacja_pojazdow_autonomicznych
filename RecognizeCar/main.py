@@ -5,7 +5,7 @@ from CenterOfMass import centerOfMass
 import time
 
 def recognizeCar():
-    path = os.path.join('..', 'Data', 'test3.png')
+    path = os.path.join('..', 'Data', 'test.png')
     img = cv2.imread(path)
     # Converting to binary image
     img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
@@ -19,7 +19,10 @@ def recognizeCar():
     obj_num = dict(zip(unique, counts))
     print obj_num
     x, y = centerOfMass(img_labeled,obj_num_total=obj_num_total,obj_num=obj_num)
-
+    print x
+    print y
+    cv2.imshow('img', img)
+    cv2.waitKey(0)
 if __name__ == "__main__":
     start_time = time.time()
     recognizeCar()
